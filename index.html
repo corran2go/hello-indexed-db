@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Indexed DB</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Scale to device width. -->
+    <meta name="viewport" content="user-scalable=no" />
+    <!-- Allow standalone mode on home screen. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Use the default status bar. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- Choose a image for the icon. -->
+    <link rel="apple-touch-icon" href="resources/images/apple-touch-icon.jpg" />
+
+    <!-- TODO display iPhone startup image in both orientations -->
+    <!-- display iPad startup image in both orientations -->
+    <link rel="apple-touch-startup-image" href="resources/images/tablet_startup_landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+    <link rel="apple-touch-startup-image" href="resources/images/tablet_startup_portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+    <script type="text/javascript" src="script.js"></script>
+
+  </head>
+  <body onload="helloIndexedDB.init();">
+    <form type="post" onsubmit="helloIndexedDB.addTodo(); return false;">
+      <input type="text" id="todo" name="todo" placeholder="What do you need to do?" style="width: 200px;" />
+      <input type="submit" value="Add Todo Item"/>
+    </form>
+    <ul id="todoItems">
+    </ul>
+  </body>  
+</html>
